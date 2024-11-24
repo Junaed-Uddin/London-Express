@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en" data-theme="wireframe">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>London Express</title>
+    <link rel="stylesheet" href="/Transport-ticket/styles/style.css" />
+    <!-- daisy ul and tailwind connection  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- home page  -->
+    <main>
+      <!-- navbar  -->
+      <nav class="mx-6 sm:mx-10 md:mx-16 lg:mx-20">
+        <div class="navbar bg-base-100 py-6">
+          <div class="navbar-start">
+            <a class="btn btn-ghost font-raleway text-3xl font-extrabold"
+              >P-Ticket</a
+            >
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal text-md px-1 font-raleway">
+              <li><a>Home</a></li>
+              <li><a>Destination</a></li>
+              <li><a>Search</a></li>
+              <li><a>About</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <button class="btn font-raleway">
+              Bus
+              <img src="/Transport-ticket/images/bus-icon.png" alt="bus-icon" />
+            </button>
+          </div>
+        </div>
+      </nav>
+      <!-- banner section  -->
+      <section class="mx-6 sm:mx-10 md:mx-16 lg:mx-20 h-full">
+        <!-- carousal  -->
+        <div class="carousel rounded-box w-full relative">
+          <div class="carousel-item w-full">
+            <img
+              src="/Transport-ticket/images/banner.png"
+              class="w-full"
+              alt="Banner"
+            />
+            <div
+              class="absolute text-center w-full top-6 sm:top-[40px] md:top-[60px] lg:top-16 xl:top-1/4"
+            >
+              <div class="text-2xl md:text-3xl lg:text-4xl xl:text-6xl">
+                <h2 class="text-white font-raleway lg:mb-3">
+                  End-to End Travel with
+                </h2>
+                <span class="text-amber-400 font-bold">London Express</span>
+              </div>
+              <p
+                class="text-white text-wrap px-2 sm:px-14 lg:px-16 mt-2 md:mt-3 lg:mt-6 text-center font-raleway text-[13px] md:text-[14px] lg:text-xl"
+              >
+                Your perfect travel companion is here! Explore routes, compare
+                fares, and book bus tickets instantly—all from the comfort of
+                your home.
+              </p>
+              <button
+                class="btn btn-accent mt-3 btn-sm md:btn-md lg:mt-5 text-[12px] lg:text-[15px] bg-amber-400 font-bold hover:border-amber-400 hover:bg-transparent hover:text-amber-400"
+              >
+                <a href="#choose-seat">Buy Tickets</a>
+              </button>
+            </div>
+          </div>
+          <!-- card info  -->
+          <div
+            class="absolute -bottom-[410px] md:-bottom-64 lg:-bottom-14 flex flex-wrap lg:flex-nowrap lg:flex-row justify-center items-center w-full md:space-x-4 spay space-y-2 lg:space-y-0 lg:space-x-6"
+          >
+            <div
+              class="bg-white w-full md:w-72 h-32 rounded-3xl border-b-[3px] border-t-[3px] lg:border-t-[0px] border-green-400 flex justify-center items-center py-6"
+            >
+              <figure>
+                <img src="/Transport-ticket/images/people.png" alt="people" />
+              </figure>
+              <div class="flex flex-col pl-4">
+                <p class="font-bold text-3xl">500K+</p>
+                <p class="text-sm">Registered users</p>
+              </div>
+            </div>
+            <div
+              class="bg-white w-full md:w-72 h-32 rounded-3xl border-b-[3px] border-t-[3px] lg:border-t-[0px] border-green-400 flex justify-center items-center py-6"
+            >
+              <figure>
+                <img
+                  src="/Transport-ticket/images/ticket-cupon.png"
+                  alt="ticket-coupon"
+                />
+              </figure>
+              <div class="flex flex-col pl-4">
+                <p class="font-bold text-3xl">1.7 lacks</p>
+                <p class="text-sm">Tickets sold</p>
+              </div>
+            </div>
+            <div
+              class="bg-white w-full md:w-72 h-32 rounded-3xl border-b-[3px] border-t-[3px] lg:border-t-[0px] border-green-400 flex justify-center items-center py-7"
+            >
+              <figure>
+                <img
+                  src="/Transport-ticket/images/stoppage.png"
+                  alt="stop-page"
+                />
+              </figure>
+              <div class="flex flex-col pl-4">
+                <p class="font-bold text-3xl">80K+</p>
+                <p class="text-sm">Rental partners</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- offer section  -->
+      <section class="sm:mx-10 mx-6 mt-20">
+        <div class="w-full mb-16">
+          <h2 class="text-3xl text-center font-raleway font-bold">
+            Best offers for you
+          </h2>
+        </div>
+        <div
+          class="flex flex-col sm:flex-row justify-center space-y-6 sm:space-y-0 sm:space-x-6 w-full"
+        >
+          <!-- 15% OFF card -->
+          <div
+            class="flex bg-amber-400 items-center rounded-2xl w-full sm:w-1/2 lg:w-1/2 xl:w-[40%]"
+          >
+            <div class="w-1/2 lg:w-1/2 pl-4 md:pl-6 lg:pl-10">
+              <div class="py-10 space-y-1">
+                <h2 class="text-3xl sm:text-2xl md:text-3xl font-extrabold">
+                  15% OFF
+                </h2>
+                <p class="text-sm text-wrap">on your next purchase</p>
+                <p class="text-sm pt-1 text-wrap text-gray-500">
+                  use by January 2024
+                </p>
+              </div>
+            </div>
+            <figure>
+              <img
+                class="sm:h-[243px]"
+                src="/Transport-ticket/images/cupon-devider.png"
+                alt="coupon"
+              />
+            </figure>
+            <div
+              class="flex flex-col md:items-center justify-center w-1/2 lg:w-1/3"
+            >
+              <h2
+                id="NEW15"
+                class="text-xl sm:text-xl md:text-[21px] font-semibold font-raleway"
+              >
+                NEW15
+              </h2>
+              <p class="text-sm text-gray-500">Coupon Code</p>
+            </div>
+          </div>
+          <!-- 20% couple  -->
+          <div
+            class="flex bg-[#F78C9C] items-center rounded-2xl w-full sm:w-1/2 lg:w-1/2 xl:w-[40%]"
+          >
+            <div class="w-1/2 lg:w-1/2 pl-4 md:pl-6 lg:pl-10">
+              <div class="py-10 space-y-1">
+                <h2 class="text-3xl sm:text-2xl md:text-3xl font-extrabold">
+                  20% OFF
+                </h2>
+                <p class="text-sm text-wrap">on your next purchase</p>
+                <p class="text-sm pt-1 text-wrap text-gray-500">
+                  use by January 2024
+                </p>
+              </div>
+            </div>
+            <figure>
+              <img
+                class="sm:h-[243px]"
+                src="/Transport-ticket/images/cupon-devider.png"
+                alt="coupon"
+              />
+            </figure>
+            <div
+              class="flex flex-col md:items-center justify-center w-1/2 lg:w-1/3"
+            >
+              <h2
+                id="Couple 20"
+                class="text-xl sm:text-[18px] md:text-[21px] text-wrap font-semibold font-raleway"
+              >
+                Couple 20
+              </h2>
+              <p class="text-sm text-gray-500 text-wrap">Coupon Code</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center mt-10">
+          <button class="btn btn-outline btn-success">See All Offers</button>
+        </div>
+      </section>
+
+      <!-- ticket purchase section  -->
+      <section
+        class="mt-24 py-20 bg-[#F7F8F8] rounded-r-[80px] rounded-l-[80px] border-t-4 border-green-500"
+      >
+        <div class="flex flex-col items-center justify-center">
+          <h1 class="text-4xl font-raleway">London Express</h1>
+          <p class="mt-4 mx-4 sm:mx-0 text-center text-gray-500">
+            Planning your next journey? Skip the queues and reserve your seat
+            online.
+            <span class="text-gray-500"
+              >Experience convenience, speed, and reliability in just a few
+              clicks.</span
+            >
+          </p>
+        </div>
+        <!-- London Express whole container -->
+        <div class="w-full flex flex-col items-center justify-center">
+          <div
+            class="mt-10 md:mt-14 mx-10 flex flex-col md:flex-row justify-center items-center w-[90%] lg:w-[80%] bg-white rounded-2xl"
+          >
+            <!-- London Express info container -->
+            <div
+              class="flex flex-col justify-center items-center xl:w-2/3 p-5 xl:p-0 xl:pr-5"
+            >
+              <!-- London Express info  -->
+              <div
+                class="flex flex-col sm:flex-row items-center space-y-5 sm:space-y-0 justify-between w-full"
+              >
+                <div class="flex space-x-3">
+                  <img
+                    src="./images/bus-logo.png"
+                    class="sm:w-[60px] sm:h-[50px]"
+                    alt="bus-logo"
+                  />
+                  <div class="">
+                    <h1 class="md:text-2xl lg:text-3xl">London Express</h1>
+                    <p class="text-[12px] text-gray-400">
+                      Coach-009-WEB ! AC_Business
+                    </p>
+                  </div>
+                </div>
+                <div class="sm:mt-5 lg:mt-0">
+                  <button
+                    class="btn bg-[#1DD100] bg-opacity-15 btn-outline btn-success"
+                  >
+                    <img class="" src="./images/seat-green.png" alt="seat" />
+                    40 Seats Left
+                  </button>
+                </div>
+              </div>
+              <!-- route departure container  -->
+              <div
+                class="flex flex-col justify-center mt-10 p-4 bg-[#F7F8F8] rounded-2xl w-full"
+              >
+                <!-- route  -->
+                <div class="divide-y divide-dashed space-y-4">
+                  <div class="flex justify-between">
+                    <p>Route</p>
+                    <p>Dhaka-Sylhet</p>
+                  </div>
+                  <!-- departure  -->
+                  <div class="flex justify-between pt-5">
+                    <p>9.00 P.M</p>
+                    <p>Departure</p>
+                  </div>
+                  <!-- button group  -->
+                  <div
+                    class="flex flex-wrap justify-center xl:justify-between pt-5 xl:space-x-5 w-full"
+                  >
+                    <button
+                      class="btn btn-neutral mb-2 md:mr-2 lg:mr-0 w-full md:w-[30%]"
+                    >
+                      Boarding Point - Laxmipur
+                    </button>
+
+                    <button
+                      class="btn btn-neutral sm:mr-2 mb-2 md:mb-0 lg:mx-2 w-full md:w-[30%]"
+                    >
+                      Dropping Point - Bogura
+                    </button>
+                    <button class="btn btn-neutral w-full md:w-[30%]">
+                      Est. Time - 11 Hour
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- info-devider  -->
+            <div class="">
+              <img
+                src="./images/info-devider.png"
+                class="rotate-90 lg:rotate-0 hidden lg:inline"
+                alt="info-devider"
+              />
+            </div>
+            <!-- per ticket price  -->
+            <div
+              class="md:w-[20%] flex flex-row justify-center md:flex-col items-center"
+            >
+              <img src="./images/fare.png" alt="fare" />
+              <h1 class="text-3xl text-center px-4 md:px-0">550 Taka</h1>
+              <p class="text-gray-400">Per Seat</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- select your seat  -->
+        <div
+          id="choose-seat"
+          class="flex flex-col items-center justify-center mt-10 w-full"
+        >
+          <div
+            class="xl:divide-x-4 divide-dashed flex flex-wrap xl:flex-nowrap bg-white p-3 md:p-8 w-[95%] sm:w-[80%] rounded-2xl"
+          >
+            <div class="divide-y-2 divide-dashed grow w-full">
+              <div class="py-3">
+                <h1 class="text-2xl">Select Your Seat</h1>
+              </div>
+              <div class="flex justify-between">
+                <div class="flex justify-center items-center">
+                  <img src="./images/seat-gray.png" alt="" />
+                  <p>Available</p>
+                </div>
+                <div class="flex justify-center items-center py-3 mr-5">
+                  <img src="./images/seat-green-filled.png" alt="" />
+                  <p class="text-green-400">Selected</p>
+                </div>
+              </div>
+              <!-- seat row container start -->
+              <div
+                class="flex flex-col items-center w-full justify-center space-y-6 sm:pr-6 pt-6"
+              >
+                <div class="mt-2 flex justify-end items-center w-full">
+                  <div class="bg-gray-300 w-full sm:w-1/4 md:w-[130px] xl:w-[120px] 2xl:w-[125px] flex justify-center border-0 rounded-xl py-4">
+                    <img src="./images/Vector.png" class="" />
+                  </div>
+                </div>
+                <div
+                  class="my-1 flex justify-around items-center w-full gap-3 sm:gap-6"
+                >
+                  <div class="text-xl text-gray-400">A</div>
+                  <!-- A1, A2, A3, A4  -->
+                  <kbd
+                    id="A1"
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >A1</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >A2</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >A3</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >A4</kbd
+                  >
+                </div>
+                <div
+                  class="my-1 flex justify-around items-center w-full gap-3 sm:gap-6"
+                >
+                  <div class="text-xl text-gray-400">B</div>
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >B1</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >B2</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >B3</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >B4</kbd
+                  >
+                </div>
+                <div
+                  class="my-1 flex justify-around items-center w-full gap-3 sm:gap-6"
+                >
+                  <div class="text-xl text-gray-400">C</div>
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >C1</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >C2</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >C3</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >C4</kbd
+                  >
+                </div>
+                <div
+                  class="my-1 flex justify-around items-center w-full gap-3 sm:gap-6"
+                >
+                  <div class="text-xl text-gray-400">D</div>
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >D1</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >D2</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >D3</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >D4</kbd
+                  >
+                </div>
+                <div
+                  class="my-1 flex justify-around items-center w-full gap-3 sm:gap-6"
+                >
+                  <div class="text-xl text-gray-400">E</div>
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >E1</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >E2</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >E3</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >E4</kbd
+                  >
+                </div>
+                <div
+                  class="my-1 flex justify-around items-center w-full gap-3 sm:gap-6"
+                >
+                  <div class="text-xl text-gray-400">F</div>
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >F1</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >F2</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >F3</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >F4</kbd
+                  >
+                </div>
+                <div
+                  class="my-1 flex justify-around items-center w-full gap-3 sm:gap-6"
+                >
+                  <div class="text-xl text-gray-400">G</div>
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >G1</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >G2</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >G3</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >G4</kbd
+                  >
+                </div>
+                <div
+                  class="my-1 flex justify-around items-center w-full gap-3 sm:gap-6"
+                >
+                  <div class="text-xl text-gray-400">H</div>
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >H1</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >H2</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >H3</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >H4</kbd
+                  >
+                </div>
+                <div
+                  class="my-1 flex justify-around items-center w-full gap-3 sm:gap-6"
+                >
+                  <div class="text-xl text-gray-400">I</div>
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >I1</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >I2</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >I3</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >I4</kbd
+                  >
+                </div>
+                <div
+                  class="my-1 flex justify-around items-center w-full gap-3 sm:gap-6"
+                >
+                  <div class="text-xl text-gray-400">J</div>
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >J1</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >J2</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >J3</kbd
+                  >
+                  <kbd
+                    class="kbd text-2xl bg-[#F7F8F8] w-full px-5 sm:px-10 border-0 rounded-xl py-3 text-gray-400"
+                    >J4</kbd
+                  >
+                </div>
+              </div>
+              <!-- seat row container end -->
+            </div>
+            <!-- seat row  -->
+            <div class="w-full xl:w-[75%] divide-y-2 divide-dashed sm:p-3">
+              <div class="">
+                <h1 class="text-2xl py-1.5 text-center">Amount Details</h1>
+              </div>
+              <div class="w-full flex items-center justify-center">
+                <div class="w-full bg-[#F7F8F8] sm:ml-5 mt-5 rounded-2xl p-5">
+                  <table class="table divide-y-2 divide-dashed">
+                    <thead class="text-[14px]">
+                      <tr class="text-black">
+                        <th><div class="flex justify-start">Seat</div></th>
+                        <th><div class="flex justify-start">Class</div></th>
+                        <th><div class="flex justify-end">Price</div></th>
+                      </tr>
+                    </thead>
+                    <tbody id="table-body" class="text-gray-400">
+                      <tr id="total-price-row" class="text-black text-[14px]">
+                        <td>
+                          <div class="flex justify-start">Total Price</div>
+                        </td>
+                        <td></td>
+                        <td>
+                          <div id="total-price" class="flex justify-end">0</div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <!-- discount price  -->
+                  <div
+                    id="discount-container"
+                    class="mx-4 my-2 flex justify-between hidden"
+                  >
+                    <p class="text-sm text-red-500">Discount Price</p>
+                    <span id="discount-price" class="text-sm text-red-500"
+                      >0</span
+                    >
+                  </div>
+                  <!-- coupon  -->
+                  <div class="flex justify-around items-center h-full mt-3 w-full">
+                    <div class="flex justify-start items-center w-full">
+                      <input
+                        id="coupon-field"
+                        type="text"
+                        placeholder="Coupon"
+                        class="input rounded-l-2xl px-4 w-2/3 mt-2"
+                        disabled
+                      />
+                      <button
+                        id="apply-btn"
+                        onclick="getDiscount()"
+                        class="btn mt-2 bg-[#1DD100] rounded-r-2xl text-white"
+                        disabled
+                      >
+                        Apply
+                      </button>
+                    </div>
+                    <div id="coupon-code-container" class="flex justify-end items-center space-x-2 w-[130px] hidden">
+                      <span id="coupon-code" class="text-xs">Couple 20</span>
+                      <button id="delete-btn" onclick="deleteBtn()" class="btn text-red-500 btn-xs bg-gray-200 rounded-lg">X</button>
+                    </div>
+                  </div>
+                  <!-- grand total  -->
+                  <div class="flex justify-between mx-4 my-5">
+                    <p class="text-sm">Grand Total</p>
+                    <p class="text-sm" id="grand-total">0</p>
+                  </div>
+                </div>
+              </div>
+              <!-- passenger info  -->
+              <div class="flex flex-col justify-start mt-7 w-full">
+                <!-- passenger name  -->
+                <form class="form-control ml-5 w-full mt-7">
+                  <div class="label">
+                    <span class="label-text font-bold">Passenger Name*</span>
+                  </div>
+                  <input
+                    required
+                    type="text"
+                    id="name"
+                    placeholder="Enter Your Name"
+                    class="input input-bordered text-[16px] input-lg rounded-xl w-[95%]"
+                  />
+                </form>
+                <!-- phone number -->
+                <form class="form-control ml-5 w-full mt-5">
+                  <div class="label">
+                    <span class="label-text font-bold">Phone Number*</span>
+                  </div>
+                  <input
+                    required
+                    id="phone-number"
+                    type="number"
+                    placeholder="Enter Your Phone Number"
+                    class="input input-bordered text-[16px] input-lg rounded-xl w-[95%]"
+                  />
+                </form>
+                <!-- email  -->
+                <form class="form-control ml-5 w-full mt-5">
+                  <div class="label">
+                    <span class="label-text font-bold">Email*</span>
+                  </div>
+                  <input
+                    required
+                    id="email"
+                    type="email"
+                    placeholder="Enter Your Email id"
+                    class="input input-bordered text-[16px] input-lg rounded-xl w-[95%]"
+                  />
+                </form>
+                <div
+                  class="flex justify-center items-center ml-5 md:mr-3 xl:mr-0 mt-7"
+                >
+                  <button
+                    disabled
+                    id="submit-btn"
+                    onclick="my_modal_3.showModal()"
+                    class="btn btn-lg w-full text-white bg-[#1DD100] rounded-2xl"
+                  >
+                    Submit
+                  </button>
+                  <!-- success page modal end -->
+                  <dialog id="my_modal_3" class="modal">
+                    <div class="modal-box shadow-xl rounded-2xl">
+                      <form method="dialog">
+                        <button
+                          class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                        >
+                          ✕
+                        </button>
+                      </form>
+                      <div class="card card-compact pt-8 pb-10 px-10">
+                        <figure>
+                          <img
+                            class="my-5"
+                            src="./images/success.png"
+                            alt="success"
+                          />
+                        </figure>
+                        <div
+                          class="flex flex-col items-center space-y-3 text-center"
+                        >
+                          <h2 class="text-3xl text-green-500 mb-5">SUCCESS</h2>
+                          <h2 class="text-lg">
+                            Thank you for Booking Our Bus Seats. We are working
+                            hard to find the best service and deals for you.
+                          </h2>
+                          <p class="text-[#4A4A4A]">
+                            Shortly you will find a confirmation in your email.
+                          </p>
+                          <div class="justify-center w-full">
+                            <button
+                              class="btn bg-[#27AE60] rounded-2xl my-2 w-1/2 text-white"
+                            >
+                              Continue
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </dialog>
+                  <!-- success page modal end -->
+                </div>
+                <div class="mt-5 flex ml-5 text-gray-400 justify-evenly">
+                  <p>Terms and Conditions</p>
+                  <p>Cancellation Policy</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer  -->
+      <footer class="footer bg-black text-white mt-14 py-16">
+        <div
+          class="flex flex-col items-center items-center md:items-start justify-center w-full h-full md:ml-10"
+        >
+          <h2 class="text-3xl mb-4">London Express</h2>
+          <p class="">Connecting you to your destination,</p>
+          <p class="">one seamless online booking at a time.</p>
+        </div>
+        <nav
+          class="flex flex-col items-center md:items-start justify-center w-full"
+        >
+          <h6 class="footer-title">Services</h6>
+          <a class="link link-hover">Branding</a>
+          <a class="link link-hover">Design</a>
+          <a class="link link-hover">Marketing</a>
+          <a class="link link-hover">Advertisement</a>
+        </nav>
+        <nav
+          class="flex flex-col items-center md:items-start justify-center w-full"
+        >
+          <h6 class="footer-title">Company</h6>
+          <a class="link link-hover">About us</a>
+          <a class="link link-hover">Contact</a>
+          <a class="link link-hover">Jobs</a>
+          <a class="link link-hover">Press kit</a>
+        </nav>
+        <nav
+          class="flex flex-col items-center md:items-start justify-center w-full"
+        >
+          <h6 class="footer-title">Social</h6>
+          <div class="grid grid-flow-col gap-4">
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current"
+              >
+                <path
+                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                ></path>
+              </svg>
+            </a>
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current"
+              >
+                <path
+                  d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+                ></path>
+              </svg>
+            </a>
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current"
+              >
+                <path
+                  d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </nav>
+      </footer>
+    </main>
+
+    <!-- scripts bundle  -->
+    <script src="/Transport-ticket/JS/utility.js"></script>
+  </body>
+</html>
