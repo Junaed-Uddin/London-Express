@@ -23,6 +23,8 @@ for (const kbd of kbdClass) {
                 const clickedElement = seatsArr.indexOf(targetElement);
                 seatsArr.splice(clickedElement, 1);
                 count++;
+                // indicator update
+                indicator(count);
                 // checking input field and enable submit button
                 checkInputField(count, false);
                 sum += ticketPrice;
@@ -42,6 +44,7 @@ for (const kbd of kbdClass) {
             id?.remove();
             seatsArr.push(targetElement);
             count--;
+            indicator(count);
             sum -= ticketPrice;
             enableElement('coupon-field', true);
             enableElement('apply-btn', true);
@@ -57,6 +60,10 @@ for (const kbd of kbdClass) {
             // alert(`${targetElement} seat, Already selected !!`);
         }
     });
+}
+
+function indicator(count) {
+    setElement('indicator', count);
 }
 
 

@@ -46,11 +46,7 @@
         <!-- carousal  -->
         <div class="carousel rounded-box w-full relative">
           <div class="carousel-item w-full">
-            <img
-              src="./images/banner.png"
-              class="w-full"
-              alt="Banner"
-            />
+            <img src="./images/banner.png" class="w-full" alt="Banner" />
             <div
               class="absolute text-center w-full top-6 sm:top-[40px] md:top-[60px] lg:top-16 xl:top-1/4"
             >
@@ -93,10 +89,7 @@
               class="bg-white w-full md:w-72 h-32 rounded-3xl border-b-[3px] border-t-[3px] lg:border-t-[0px] border-green-400 flex justify-center items-center py-6"
             >
               <figure>
-                <img
-                  src="./images/ticket-cupon.png"
-                  alt="ticket-coupon"
-                />
+                <img src="./images/ticket-cupon.png" alt="ticket-coupon" />
               </figure>
               <div class="flex flex-col pl-4">
                 <p class="font-bold text-3xl">1.7 lacks</p>
@@ -107,10 +100,7 @@
               class="bg-white w-full md:w-72 h-32 rounded-3xl border-b-[3px] border-t-[3px] lg:border-t-[0px] border-green-400 flex justify-center items-center py-7"
             >
               <figure>
-                <img
-                  src="./images/stoppage.png"
-                  alt="stop-page"
-                />
+                <img src="./images/stoppage.png" alt="stop-page" />
               </figure>
               <div class="flex flex-col pl-4">
                 <p class="font-bold text-3xl">80K+</p>
@@ -209,7 +199,7 @@
       <section
         class="mt-24 py-20 bg-[#F7F8F8] rounded-r-[80px] rounded-l-[80px] border-t-4 border-green-500"
       >
-        <div class="flex flex-col items-center justify-center">
+        <div class="flex flex-col items-center justify-center px-6">
           <h1 class="text-4xl font-raleway">London Express</h1>
           <p class="mt-4 mx-4 sm:mx-0 text-center text-gray-500">
             Planning your next journey? Skip the queues and reserve your seat
@@ -223,7 +213,7 @@
         <!-- London Express whole container -->
         <div class="w-full flex flex-col items-center justify-center">
           <div
-            class="mt-10 md:mt-14 mx-10 flex flex-col md:flex-row justify-center items-center w-[90%] lg:w-[80%] bg-white rounded-2xl"
+            class="mt-10 md:mt-14 mx-10 flex flex-col md:flex-row justify-center items-center w-[95%] sm:w-[90%] lg:w-[85%] bg-white rounded-2xl"
           >
             <!-- London Express info container -->
             <div
@@ -257,7 +247,7 @@
               </div>
               <!-- route departure container  -->
               <div
-                class="flex flex-col justify-center mt-10 p-4 bg-[#F7F8F8] rounded-2xl w-full"
+                class="flex flex-col justify-center mt-10 p-7 bg-[#F7F8F8] rounded-2xl w-full"
               >
                 <!-- route  -->
                 <div class="divide-y divide-dashed space-y-4">
@@ -302,7 +292,7 @@
             </div>
             <!-- per ticket price  -->
             <div
-              class="md:w-[20%] flex flex-row justify-center md:flex-col items-center"
+              class="md:w-[20%] flex flex-row justify-center pt-5 pb-10 md:flex-col items-center"
             >
               <img src="./images/fare.png" alt="fare" />
               <h1 class="text-3xl text-center px-4 md:px-0">550 Taka</h1>
@@ -317,7 +307,7 @@
           class="flex flex-col items-center justify-center mt-10 w-full"
         >
           <div
-            class="xl:divide-x-4 divide-dashed flex flex-wrap xl:flex-nowrap bg-white p-3 md:p-8 w-[95%] sm:w-[80%] rounded-2xl"
+            class="xl:divide-x-4 divide-dashed flex flex-wrap xl:flex-nowrap bg-white p-3 md:p-8 w-[95%] sm:w-[90%] lg:w-[85%] rounded-2xl"
           >
             <div class="divide-y-2 divide-dashed grow w-full">
               <div class="py-3">
@@ -338,7 +328,9 @@
                 class="flex flex-col items-center w-full justify-center space-y-6 sm:pr-6 pt-6"
               >
                 <div class="mt-2 flex justify-end items-center w-full">
-                  <div class="bg-gray-300 w-full sm:w-1/4 md:w-[130px] xl:w-[120px] 2xl:w-[125px] flex justify-center border-0 rounded-xl py-4">
+                  <div
+                    class="bg-gray-300 w-full sm:w-1/4 md:w-[130px] xl:w-[120px] 2xl:w-[125px] flex justify-center border-0 rounded-xl py-4"
+                  >
                     <img src="./images/Vector.png" class="" />
                   </div>
                 </div>
@@ -559,7 +551,7 @@
             </div>
             <!-- seat row  -->
             <div class="w-full xl:w-[75%] divide-y-2 divide-dashed sm:p-3">
-              <div class="">
+              <div class="lg:py-8 xl:py-0">
                 <h1 class="text-2xl py-1.5 text-center">Amount Details</h1>
               </div>
               <div class="w-full flex items-center justify-center">
@@ -567,7 +559,12 @@
                   <table class="table divide-y-2 divide-dashed">
                     <thead class="text-[14px]">
                       <tr class="text-black">
-                        <th><div class="flex justify-start">Seat</div></th>
+                        <th>
+                          <div class="flex justify-start indicator">
+                            <span id="indicator" class="indicator-item badge bg-slate-300">0</span>
+                            <div class="border bg-gray-200 grid h-10 w-20 rounded-lg place-items-center">Seat</div>
+                          </div>
+                        </th>
                         <th><div class="flex justify-start">Class</div></th>
                         <th><div class="flex justify-end">Price</div></th>
                       </tr>
@@ -595,7 +592,9 @@
                     >
                   </div>
                   <!-- coupon  -->
-                  <div class="flex justify-around items-center h-full mt-3 w-full">
+                  <div
+                    class="flex justify-around items-center h-full mt-3 w-full"
+                  >
                     <div class="flex justify-start items-center w-full">
                       <input
                         id="coupon-field"
@@ -613,9 +612,18 @@
                         Apply
                       </button>
                     </div>
-                    <div id="coupon-code-container" class="flex justify-end items-center space-x-2 w-[130px] hidden">
+                    <div
+                      id="coupon-code-container"
+                      class="flex justify-end items-center space-x-2 w-[130px] hidden"
+                    >
                       <span id="coupon-code" class="text-xs">Couple 20</span>
-                      <button id="delete-btn" onclick="deleteBtn()" class="btn text-red-500 btn-xs bg-gray-200 rounded-lg">X</button>
+                      <button
+                        id="delete-btn"
+                        onclick="deleteBtn()"
+                        class="btn text-red-500 btn-xs bg-gray-200 rounded-lg"
+                      >
+                        X
+                      </button>
                     </div>
                   </div>
                   <!-- grand total  -->
