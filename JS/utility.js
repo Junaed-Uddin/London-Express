@@ -23,6 +23,8 @@ for (const kbd of kbdClass) {
                 const clickedElement = seatsArr.indexOf(targetElement);
                 seatsArr.splice(clickedElement, 1);
                 count++;
+                // seat availability update 
+                seatAvailability(count);
                 // indicator update
                 indicator(count);
                 // checking input field and enable submit button
@@ -44,7 +46,10 @@ for (const kbd of kbdClass) {
             id?.remove();
             seatsArr.push(targetElement);
             count--;
+            // indicator update
             indicator(count);
+            // seat availability update 
+            seatAvailability(count);
             sum -= ticketPrice;
             enableElement('coupon-field', true);
             enableElement('apply-btn', true);
@@ -62,8 +67,16 @@ for (const kbd of kbdClass) {
     });
 }
 
+
+// indicator 
 function indicator(count) {
     setElement('indicator', count);
+}
+
+// seat availability 
+function seatAvailability(count) {
+    const availableSeats = 40 - count;
+    setElement('seat-no', availableSeats);
 }
 
 
