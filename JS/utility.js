@@ -15,6 +15,11 @@ for (const kbd of kbdClass) {
             backgroundChange(kbd, 'bg-[#F7F8F8]', 'bg-[#1DD100]', 'text-white', 'text-gray-400') :
             backgroundChange(kbd, 'bg-[#1DD100]', 'bg-[#F7F8F8]', 'text-gray-400', 'text-white');
 
+        // ignore clicks beyond 4 selections 
+        if(count === 4 && seatsArr.includes(targetElement)){
+            return;
+        }
+
         /* select/deselect seats based on click but not more than 4 and also update the
         ticket price, enable/disable coupon fields and so on  */
 
@@ -35,6 +40,7 @@ for (const kbd of kbdClass) {
             if (count === 4) {
                 enableElement('coupon-field', false);
                 enableElement('apply-btn', false);
+                return;
             }
             else {
                 enableElement('coupon-field', true);
