@@ -17,6 +17,7 @@ for (const kbd of kbdClass) {
 
         // ignore clicks beyond 4 selections 
         if(count === 4 && seatsArr.includes(targetElement)){
+            alert(`You've already selected ${count} seats`);
             return;
         }
 
@@ -40,7 +41,6 @@ for (const kbd of kbdClass) {
             if (count === 4) {
                 enableElement('coupon-field', false);
                 enableElement('apply-btn', false);
-                return;
             }
             else {
                 enableElement('coupon-field', true);
